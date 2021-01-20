@@ -47,39 +47,3 @@ Once complete you'll be able to use this image with the following docker-compose
 The 
 </p>
 </details>
-# React Composition
-
-### App
-
-```babel
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-```
-
-<details><summary>React.Fragment</summary>
-<details><summary>Banner</summary>
-<p>
-  Banner Details
-</p>
-</details>
-<details><summary>Menu</summary>
-<p>
-  Menu Details
-</p>
-</details>
-<details><summary>Submit</summary>
-<p>
-  Submit Details
-</p>
-</details>
-</details>
