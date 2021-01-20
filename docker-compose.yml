@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  primary:
+    image:  livedb/mysql57
+    command: ['--defaults-file=/etc/my.cnf', '--init-file=/etc/init.sql']
+    restart: always
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./primary:/var/lib/mysql
+    ports:
+      - 3306:3306
+  replica:
+    image:  livedb/mysql57
+    command: ['--defaults-file=/etc/my.cnf', '--init-file=/etc/init.sql']
+    restart: always
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./replica:/var/lib/mysql
+    ports:
+      - 3307:3307
